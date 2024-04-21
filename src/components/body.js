@@ -1,10 +1,10 @@
 import React from 'react'
-import { RouterPovider } from "react-router-dom"
+import { RouterProvider } from "react-router-dom"
 import { createBrowserRouter } from "react-router-dom"
-import Browse from './Browse'
-import Signin from './Signin'
+import Browse from './browse'
+
 import Login from './login'
-const body = () => {
+const Body = () => {
     const appRouter = createBrowserRouter([
         {
             path: "/",
@@ -14,16 +14,15 @@ const body = () => {
             path: "/browse",
             element: <Browse />
         },
-        {
-            path: "/signin",
-            element: <Signin />
-        }
+        
     ])
     return (
         <div>
-            <RouterPovider router={appRouter}></RouterPovider>
+            <RouterProvider router={appRouter}></RouterProvider>
         </div>
     )
 }
 
-export default body
+export default Body
+
+
